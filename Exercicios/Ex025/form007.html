@@ -7,7 +7,38 @@
 </head>
 <body>
     <h1>Exemplode formulário</h1>
-    <form action="" method="get"></form>
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+    <label for="iest">Estado</label>
+    <select name="estado" id="iest">
+
+        <optgroup label="Região Sudeste">
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="SP">São Paulo</option>
+            <option value="MG">Minas Gerais</option>
+        </optgroup>
+    </select>
+
+    <p>
+        <label for="iprof">Profissão</label>
+        <input type="text" name="prof" id="iprof" list="lstprof">
+        <datalist id="lstprof">
+            <option value="prof">Professor</option>
+            <option value="adm">Administrador</option>
+            <option value="dev">Desenvolvedor</option>
+        </datalist>
+    </p>
+
+    <p>
+        <label for="msg">Mensagem: </label> <br>
+        <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+    </p>
     
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>
+
+    </form>
 </body>
 </html>
